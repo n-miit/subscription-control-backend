@@ -1,6 +1,7 @@
 package ru.mityushkin.subscriptions_control_backend.telegram
 
 import mu.KotlinLogging
+import org.springframework.beans.factory.annotation.Value
 import org.telegram.telegrambots.extensions.bots.commandbot.TelegramLongPollingCommandBot
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage
 import org.telegram.telegrambots.meta.api.objects.Message
@@ -9,7 +10,8 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiException
 
 
 class TelegramBot(
-    botToken: String = "123",
+    @Value("\${telegram.token}")
+    private val botToken: String,
 ) : TelegramLongPollingCommandBot(botToken) {
     override fun getBotUsername(): String {
         TODO("Not yet implemented")
