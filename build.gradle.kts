@@ -25,6 +25,9 @@ dependencies {
     implementation("org.telegram:telegrambots:$telegramBotVersion")
     implementation("org.telegram:telegrambotsextensions:$telegramBotVersion")
 
+    // Spring
+    implementation("org.springframework.boot:spring-boot-starter-web")
+
     // LOG
     implementation("io.github.microutils:kotlin-logging:1.12.5")
 
