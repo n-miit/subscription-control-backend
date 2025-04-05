@@ -9,7 +9,7 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiException
 
 
 class TelegramBot(
-    botToken: String = "7530378358:AAFw0oxJ1SzqTeXHotYBCaVoRIM1s_nXMN8",
+    botToken: String = "123",
 ) : TelegramLongPollingCommandBot(botToken) {
     override fun getBotUsername(): String {
         TODO("Not yet implemented")
