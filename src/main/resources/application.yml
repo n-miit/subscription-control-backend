@@ -1,10 +1,30 @@
 spring:
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        jdbc:
+          batch_size: 400
+        format_sql: false
+        jdbc.lob.non_contextual_creation: true
+        default_batch_fetch_size: 100
+        batch_fetch_style: dynamic
   application:
     name: subscriptions-control-backend
   servlet:
     multipart:
       max-file-size: 10MB
       max-request-size: 10MB
+  datasource:
+    url: jdbc:postgresql://localhost:5432/subscriptions_control_bot_local
+    username: subscriptions_control_bot_local
+    password:
 
 telegram:
-  token: "123"
+  token: "7530378358:AAFw0oxJ1SzqTeXHotYBCaVoRIM1s_nXMN8"
+  start:
+    identifier: "start"
+    description: "Start"
+  add-subscribe:
+    identifier: "start"
+    description: "Start"
